@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;MyDaoServlet2&apos; to &apos;MyDaoCompleteProject&apos;" description="Rename resource &apos;MyDaoServlet2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/MyDaoServlet2" name="MyDaoCompleteProject" stamp="1510230537246" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;MyDaoCompleteProject&apos; to &apos;MyDaoCompleteMVCProject&apos;" description="Rename resource &apos;MyDaoCompleteProject&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/MyDaoCompleteProject" name="MyDaoCompleteMVCProject" stamp="1510230557150" updateReferences="true"/>
+</session>

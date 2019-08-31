@@ -1,0 +1,128 @@
+package com.stosh.controller;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.stosh.Dao.PensionerSignUpDao;
+import com.stosh.pensionerModal.Pensioner;
+
+
+/**
+ * Servlet implementation class PensionerServlet
+ */
+@WebServlet("/PensionerSignUpServlet")
+public class PensionerSignUpServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public PensionerSignUpServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		PensionerSignUpDao sdo = new PensionerSignUpDao();
+		
+		
+		try {
+			
+			if(request.getParameter("createNewAccount")!=null) {
+				
+				if(request.getParameter("FirstName").isEmpty() || request.getParameter("FirstName")==null) {
+					response.sendRedirect("Signup.jsp");
+					return;
+				}
+				if(request.getParameter("LastName").isEmpty()  || request.getParameter("LastName")==null){
+					response.sendRedirect("Signup.jsp");
+					return;
+				}
+				
+				Pensioner pn1 = new Pensioner();
+				pn1.setFirstName(request.getParameter("FirstName"));
+				pn1.setLastName(request.getParameter("LastName"));
+				pn1.setPassword(request.getParameter("Password"));
+				pn1.setAddress(request.getParameter("Address"));
+				
+				sdo.insertPensionerInfo(pn1);
+				
+//				Going back to SignUp-Login page rather than Pensioner-list.jsp page
+				response.sendRedirect("Login.jsp");
+				return;
+				
+//			}else if(request.getParameter("idForDelete")!=null) {
+//				int id1 = Integer.parseInt(request.getParameter("idForDelete"));
+//				sdo.deletePensioner(id1);
+//				
+//			}else if(request.getParameter("idForEdit")!=null) {
+//				int id2 = Integer.parseInt(request.getParameter("idForEdit"));
+//				
+//			
+//				Pensioner pn5 = sdo.getSinglePensionerInfo(id2);
+//				request.setAttribute("ss1", pn5);
+//				
+//				RequestDispatcher rd5 = request.getRequestDispatcher("Signup.jsp");
+//				rd5.forward(request,response);
+//				return;
+//				
+//			}else if(request.getParameter("update")!=null) {
+//				int id5 = Integer.parseInt(request.getParameter("id6"));
+//				
+//				Pensioner pn8 = new Pensioner();
+//				pn8.setId(id5);
+//				pn8.setFirstName(request.getParameter("FirstName"));
+//				pn8.setLastName(request.getParameter("LastName"));
+//				pn8.setPassword(request.getParameter("Password"));
+//				pn8.setAddress(request.getParameter("Address"));
+//				
+//				sdo.updateStudent(pn8);
+//				
+			}
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	
+		
+//		try {
+//			
+//			List <Pensioner> li = sdo.getPensionerCompleteList();
+//			
+//			request.setAttribute("sList1", li);
+//			
+//			RequestDispatcher rd = request.getRequestDispatcher("pensioner-list.jsp");
+//			rd.forward(request, response);
+//			
+//			
+//		}catch(Exception e) {
+//			e.printStackTrace();
+	//	}
+		
+		
+		
+		
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

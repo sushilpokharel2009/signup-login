@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 7 resources" deleteContents="false" description="Delete 7 resources" element1="/FirstWeb" element2="/MyDaoCompleteMVCProject" element3="/MyDaoSevlet3" element4="/MyFIrstMVCDatabaseProject" element5="/OneToManyHibernateRelation" element6="/OneToOneHibernateRelation" element7="/SecondWeb" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="7" stamp="1511377945774"/>
+</session>

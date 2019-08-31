@@ -1,0 +1,40 @@
+package com.stosh.Dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
+
+import com.stosh.pensionerModal.Comment;
+import com.stosh.util.PensionerDBConnection;
+
+public class CommentDao {
+	
+	
+	
+	
+	public  List<Comment> getCommentList() {
+		try {
+			Connection con = PensionerDBConnection.myConnection();
+			String query = "select * from Complete";
+			PreparedStatement pst = con.prepareStatement(query);
+			
+			
+			ResultSet rs = pst.executeQuery();
+			
+			List<Comment> cl = new ArrayList();
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return null;
+		
+	}
+	
+	
+
+}

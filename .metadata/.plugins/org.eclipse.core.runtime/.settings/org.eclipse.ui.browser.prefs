@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<system/>\n<external location\="/Applications/Firefox.app" name\="Firefox"/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:9999/FirstWeb/|*|http\://localhost\:9999/SecondWeb/|*|http\://localhost\:9999/SecondWeb/File.jsp|*|http\://localhost\:9999/SecondWeb/File.html|*|http\://localhost\:9999/FirstWeb/form.jsp|*|http\://localhost\:9999/SecondWeb/MyClass?firstName\=ham&LastName\=wed&address\=wee|*|http\://localhost\:9999/SecondWeb/MyClass|*|http\://localhost\:9999/FirstWeb/form-list.jsp|*|http\://localhost\:9999/FirstWeb/day.html|*|http\://localhost\:9999/FirstWeb/FirstServlet|*|http\://localhost\:9999/FirstWeb/FirsrServlet|*|http\://localhost\:9999/FirstWeb/FirstServlet?StudentName\=h&StudentAddress\=e|*|
